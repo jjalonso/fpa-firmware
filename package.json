@@ -2,11 +2,13 @@
   "name": "fpa-firmware",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "pull": "git pull",
+    "start": "node src/main.js",
+    "pull-start": "npm run pull && npm run start"
   },
-  "author": "",
+  "author": "Rocktaps limited",
   "license": "ISC",
   "dependencies": {
     "bluetoothctl": "^1.1.0"
