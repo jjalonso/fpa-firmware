@@ -1,1 +1,3 @@
-console.log('Hello World');
+const blue = require('bluetoothctl');
+
+console.log(blue.checkBluetoothController());
