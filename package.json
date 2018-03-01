@@ -11,6 +11,11 @@
   "author": "Rocktaps limited",
   "license": "ISC",
   "dependencies": {
-    "bluetoothctl": "^1.1.0"
+    "bluetoothctl": "^1.1.0",
+    "noble": "^1.9.0",
+    "onoff": "^2.0.0"
+  },
+  "devDependencies": {
+    "node-beacon-scanner": "0.0.2"
   }
 }
