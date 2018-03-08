@@ -4,9 +4,7 @@
   "description": "",
   "main": "src/main.js",
   "scripts": {
-    "pull": "git pull",
-    "start": "node src/main.js",
-    "pull-start": "npm run pull && npm run start"
+    "start": "node src/index.js"
   },
   "author": "Rocktaps limited",
   "license": "ISC",
