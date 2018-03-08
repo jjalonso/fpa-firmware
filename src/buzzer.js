@@ -23,4 +23,4 @@ class Buzzer {
 
 }
 
-exports.module = Buzzer;
+module.exports = Buzzer;
