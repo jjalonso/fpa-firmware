@@ -1,4 +1,4 @@
 const Scanner = require('./scanner.js');
 
-var scanner = new Scanner();
+const scanner = new Scanner();
 scanner.start();
