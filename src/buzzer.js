@@ -1,12 +1,15 @@
 const Gpio = require('onoff').Gpio;
+const Logging = require('js-logging');
 
 class Buzzer {
 
-    constructor() {
-        this._resource = new Gpio(27, 'out');
+    constructor(pin) {
+        this._resource = new Gpio(pin, 'out');
+        this._logger = new Logging();        
     }
 
     beep(time) {
+        this._logger.info('Beep');
         this._resource.writeSync(0);
         setTimeout(() => this._resource.writeSync(1), time);
     }
