@@ -5,12 +5,14 @@ const Buzzer = require('./buzzer.js');
 class Main {
 
     constructor() {
-      this._scanner = new Scanner();
-      this._buzzer = new Buzzer(27);
-      this._bindEvents();
+        this._running = false;
+        this._scanner = new Scanner();
+        this._buzzer = new Buzzer(27);
+        this._bindEvents();
     }
 
     start() {
+        this._runnning = true;
         this._scanner.scan();
     }
 
@@ -23,6 +25,7 @@ class Main {
         this._buzzer.beep();
         console.log('TODO: SUCCESS')
         console.log(result);
+        if (this._running) { this._scanner.scan() };
     }
 
     _onFailureScan(err) {

@@ -6,13 +6,12 @@ class Buzzer {
     constructor(pin) {
         this._resource = new Gpio(pin, 'out');
         this._logger = new Logging();        
-        // this._resource.writeSync(1);
+        this._resource.writeSync(1);
     }
 
     beep(time=5000) {
         this._logger.info('Beep');
-        // this._resource.writeSync(0);
-        console.log('beep');
+        this._resource.writeSync(0);
         setTimeout(() => {console.log('timeout!'); this._resource.writeSync(1)}, time);
     }
 
