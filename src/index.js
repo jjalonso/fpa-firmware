@@ -23,8 +23,6 @@ class Main {
 
     _onSuccessScan(result) {
         this._buzzer.beep();
-        console.log('TODO: SUCCESS');
-        console.log(result);
         if (this._running) { this._scanner.scan() };
     }
 
