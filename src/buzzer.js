@@ -6,6 +6,7 @@ class Buzzer {
     constructor(pin) {
         this._resource = new Gpio(pin, 'out');
         this._logger = new Logging();        
+        this._resource.writeSync(0);
     }
 
     beep(time=500) {
