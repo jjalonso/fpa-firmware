@@ -21,6 +21,7 @@ class Scanner {
 
     _onSuccessScan(result) {
         this._logger.debug('Scan done', result);
+        console.log(this._onSuccessCb);
         this._onSuccessCb != null && this._onSuccessCb(result);
     }
 
