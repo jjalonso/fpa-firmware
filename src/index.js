@@ -12,7 +12,7 @@ class Main {
     }
 
     start() {
-        this._runnning = true;
+        this._running = true;
         this._scanner.scan();
     }
 
