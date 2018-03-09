@@ -8,14 +8,13 @@ class Buzzer {
         this._logger = new Logging();        
     }
 
-    beep(time) {
+    beep(time=500) {
         this._logger.info('Beep');
         this._resource.writeSync(0);
         setTimeout(() => this._resource.writeSync(1), time);
     }
 
-    ring() {
-        var beepTime = 500;
+    alarm(beepTime=500) {
         this.beep(beepTime);
         setTimeout(() => this.beep(beepTime), beepTime * 2)
         setTimeout(() => this.beep(beepTime), beepTime * 3)
