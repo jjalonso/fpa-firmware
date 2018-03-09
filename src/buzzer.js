@@ -9,7 +9,7 @@ class Buzzer {
         this._resource.writeSync(1);
     }
 
-    beep(time=500) {
+    beep(time=5000) {
         this._logger.info('Beep');
         this._resource.writeSync(0);
         setTimeout(() => this._resource.writeSync(1), time);
