@@ -31,5 +31,5 @@ class Main {
 
 }
 
-main = Main();
+main = new Main();
 main.start();
