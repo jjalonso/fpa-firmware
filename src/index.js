@@ -17,8 +17,8 @@ class Main {
     }
 
     _bindEvents() {
-        this._scanner.onSuccess = () => this._onSuccessScan;
-        this._scanner.onFailure = () => this._onFailureScan;
+        this._scanner.onSuccess = (result) => this._onSuccessScan(result);
+        this._scanner.onFailure = (err) => this._onFailureScan(err);
     }
 
     _onSuccessScan(result) {
