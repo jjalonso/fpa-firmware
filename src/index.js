@@ -22,7 +22,7 @@ class Main {
     }
 
     _onSuccessScan(result) {
-        this._buzzer.beep();
+        // this._buzzer.beep();
         if (this._running) { this._scanner.scan() };
     }
 
